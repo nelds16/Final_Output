@@ -1,0 +1,23 @@
+body{
+    
+   padding: 20px 0px 20px 0px;
+
+}
+form{
+    padding: 10px 200px 10px 200px;
+}
+
+@media (max-width:768px){
+    li{
+        font-size: 12px;
+    }
+    .boton{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:425px){
+    form{
+        padding: 10px 10px 10px 10px;
+    }
+}

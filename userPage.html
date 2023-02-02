@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <title>User Page</title>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="homePage.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img src="images\logo.png" width="40" height="40" role="img" alt="logo" width="100">
+             <b>my.Sticker</b>
+          </a>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="applicationPage.html" class="nav-link px-2 link-dark">Application</a></li>
+            <li><a href="policiesPage.html" class="nav-link px-2 link-dark">Policies</a></li>
+            <li><a href="proceduresPage.html" class="nav-link px-2 link-dark">Procedures</a></li>
+            <li><a href="violationPage.html" class="nav-link px-2 link-dark">Violations</a></li>
+            <li><a href="schedulePage.html" class="nav-link px-2 link-dark">Schedules</a></li>
+          </ul>
+    
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-success boton" onclick="location.href='homePage.html'">dlsud home</button>
+            <button type="button" class="btn btn-danger boton" onclick="location.href='index.html'">logout</button>
+          </div>
+        </header>
+      </div>
+      
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"><span class="font-weight-bold"><?php echo $resultest['FIRST_NAME']?> </span>
+                <span class="text-black-50"></span><span> </span></div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">User Information</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-4"><label class="labels">First Name</label><input type="text" class="form-control" placeholder="first name" value="<?php echo $resultest['FIRST_NAME']?>" disabled></div>
+                        <div class="col-md-4"><label class="labels">Middle Name</label><input type="text" class="form-control" value="<?php echo $resultest['MIDDLE_NAME'];?>" placeholder="midname" disabled></div>
+                        <div class="col-md-4"><label class="labels">Last Name</label><input type="text" class="form-control" value="<?php echo $resultest['LAST_NAME'];?>" placeholder="lastname" disabled></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">House No.</label><input type="text" class="form-control" placeholder="enter phone number" value="<?php echo $resultest['HOUSE_NO'];?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">Street/Subdivision</label><input type="text" class="form-control" placeholder="enter address line 1" value="<?php echo $resultest['STREET_SUBDIVISION'];?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">Barangay</label><input type="text" class="form-control" placeholder="enter address line 2" value="<?php echo $resultest['BARANGAY'];?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">City/Municipality</label><input type="text" class="form-control" placeholder="enter address line 2" value="<?php echo $resultest['CITY_MUNICIPALITY'];?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">Birthday</label><input type="text" class="form-control" placeholder="bday" value="<?php echo $resultest['BIRTHDATE']->format('d/m/Y');?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="email" value="<?php echo $resultest['EMAIL'];?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="mobile" value="<?php echo $resultest['MOBILE'];?>" disabled></div>
+                        <div class="col-md-12"><label class="labels">Landline</label><input type="text" class="form-control" placeholder="landline" value="<?php echo $resultest['LANDLINE'];?>" disabled></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience"><span>Vaccination Status</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;<?php echo $resultest['VACCINATION_STATUS'];?></span></div><br>
+                    <div class="row mt-3">
+                    
+                        <div class="col-md-6"><label class="labels">Date of First Dose</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['VACCINATION_FIRST_DATE']->format('d/m/Y');?>"disabled></div> <br>
+                        <div class="col-md-6"><label class="labels">Date of Second Dose</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['VACCINATION_SECOND_DATE']->format('d/m/Y');?>"disabled></div> <br>
+                        <div class="col-md-12"><label class="labels">Vaccine Brand</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['VACCINE_BRAND'];?>" disabled></div> <br>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-between align-items-center experience"><span>Booster Status</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;<?php echo $resultest['BOOSTER_STATUS'];?></span></div>
+                    <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">First Booster</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['BOOSTER_FIRST_DATE']->format('d/m/Y');?>" disabled></div> <br>
+                    <div class="col-md-6"><label class="labels">Brand</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['BOOSTER_FIRST_BRAND'];?>" disabled></div> <br>
+                    <div class="col-md-6"><label class="labels">Second Booster</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['BOOSTER_SECOND_DATE']->format('d/m/Y');?>" disabled></div> <br>
+                    <div class="col-md-6"><label class="labels">Brand</label><input type="text" class="form-control" placeholder="experience" value="<?php echo $resultest['BOOSTER_SECOND_BRAND'];?>" disabled></div> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   
+</body>
+</html>

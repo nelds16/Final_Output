@@ -1,0 +1,45 @@
+
+body{
+    padding: 20px 200px 20px 200px;
+}
+
+table{
+
+    text-align: center;
+    
+}
+
+
+.homepage{
+    text-align: center;
+}
+
+@media (max-width:768px){
+    li{
+        font-size: 12px;
+    }
+    .boton{
+        font-size: 12px;
+    }
+    .proc{
+        font-size: 10px;
+    }
+    .sente{
+        font-size: 12px;
+    }
+    .borderist{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width:1024px){
+    .borderist{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    body{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

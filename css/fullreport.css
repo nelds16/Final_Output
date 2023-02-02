@@ -1,0 +1,13 @@
+.violationcar{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;;
+}
+
+
+p{
+    text-align: center;
+}
+a{
+    text-align: center;
+}
